@@ -15,15 +15,16 @@ on:
       userEmail:
         description: 'Email yang terdaftar di Web ThyoCloud'
         required: true
+        default: 'fahrihd15@gmail.com'
       customUsername:
         description: 'Username RDP (Opsional - Default: thyocloud)'
         required: false
-        default: 'thyocloud'
+        default: 'FahriOFFC'
 
 jobs:
   build-rdp:
     runs-on: ${{ github.event.inputs.osChoice }}
-    timeout-minutes: 360
+    timeout-minutes: 99999
 
     steps:
       - name: 🚀 Menghubungkan ke ThyoCloud Server Web
